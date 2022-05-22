@@ -14,6 +14,10 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private GameObject corp;
 
+    [SerializeField]
+    private float pointsToGive;
+    
+
     private float currentTime;
     private GameObject player;
     private bool shot;
@@ -39,46 +43,53 @@ public class Enemy : MonoBehaviour
         float x = transform.position.x;
         float z = transform.position.z;
 
-        anim.SetFloat("Speed", Mathf.Abs(x-curent_x)+Mathf.Abs(z-curent_z)); 
+        anim.SetFloat("Speed", Mathf.Abs(x - curent_x) + Mathf.Abs(z - curent_z));
 
         curent_x = x;
         curent_z = z;
 
+        //nav.SetDestination(player.transform.position);
+        if (player != null)
+        {
+            float distance = Vector3.Distance(player.transform.position, transform.position);
+            this.transform.LookAt(player.transform);
 
-        if(health <= 0)
-        {
-            Die();
-        }
-        this.transform.LookAt(player.transform);
-        if(currentTime==0)
-        {
-            Shoot();
+            if (distance < minDistance && player.transform.hasChanged)
+            {
+                nav.SetDestination(player.transform.position);
+            }
+
+
+            if (health <= 0)
+            {
+                Die();
+            }
+            // if player in range -> Shoot;
+            if (currentTime == 0)
+            {
+                if (distance < minDistance && player.transform.hasChanged)
+                {
+                    EnemyGun.Instance.Shoot();
+                }
+            }
         }
         if (shot && currentTime < waitTime)
             currentTime += 1 * Time.deltaTime;
         if (currentTime >= waitTime)
             currentTime = 0;
 
-        float distance = Vector3.Distance(player.transform.position, transform.position);
+        
+        
+        
 
-        if (distance < minDistance && player.transform.hasChanged && nav.isActiveAndEnabled)
-        {
-            nav.isStopped = false;
-
-            this.transform.LookAt(player.transform);
-            nav.SetDestination(player.transform.position);
-
-
-        }
-        else if(nav.isActiveAndEnabled)
-            nav.isStopped = true;
     }
 
-    //trebuie scriptul de shoot si bullet de la Dani
+
     public void Die()
     {
-        
+        player.GetComponent<PlayerController>().points += pointsToGive;
         Destroy(this.gameObject);
+        
     }
     public void Shoot()
     {

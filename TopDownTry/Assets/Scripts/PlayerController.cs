@@ -10,7 +10,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject corp;
 
+    [SerializeField]
+    public float phealth;
+
+    [SerializeField]
+    public float points;
+
     private Animator anim;
+
 
     void Start()
     {
@@ -23,6 +30,7 @@ public class PlayerController : MonoBehaviour
         MovementInput();
         RotationInput();
         HandleShootInput();
+        checkStatus();
     }
     void MovementInput()
     {
@@ -53,5 +61,14 @@ public class PlayerController : MonoBehaviour
             {
                     PlayerGun.Instance.Shoot();
             }
+    }
+
+    void checkStatus()
+    {
+        if(phealth <= 0)
+        {
+            Destroy(this.gameObject);
+            Application.Quit();
+        }
     }
 }
