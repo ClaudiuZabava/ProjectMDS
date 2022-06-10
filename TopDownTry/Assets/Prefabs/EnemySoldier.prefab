@@ -1026,7 +1026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2df59cb1fbecd0e4983e61bdca3e89a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 100
   waitTime: 3
   corp: {fileID: 187294}
   pointsToGive: 10

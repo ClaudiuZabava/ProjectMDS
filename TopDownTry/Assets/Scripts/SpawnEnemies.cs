@@ -6,23 +6,26 @@ public class SpawnEnemies : MonoBehaviour
 {
     public GameObject theEnemy;
     private GameObject player;
+    private PlayerController playerScript;
     private int xPos;
     private int zPos;
     public int enemyCount;
     public float timeBetSpawn;
-    public int maxEnemies;
+    public int ScoreMaxEnemies;
     public int radiusNotToSpawn;
     void Start()
     {
         if (player == null)
             player = GameObject.FindGameObjectWithTag("Player");
+        if (playerScript == null)
+            playerScript=player.GetComponent<PlayerController>();
         StartCoroutine(EnemyDrop());
     }
 
     IEnumerator EnemyDrop()
     {
         
-        while(enemyCount < maxEnemies)
+        while(playerScript.points < ScoreMaxEnemies)
         {
             do
             {
