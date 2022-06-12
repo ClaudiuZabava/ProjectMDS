@@ -31,6 +31,9 @@ public class Enemy : MonoBehaviour
 
     [SerializeField]
     private GameObject MuzzleFlash;
+
+    [SerializeField]
+    private AudioSource mAudioSrc;
     
 
     private float currentTime;
@@ -53,14 +56,16 @@ public class Enemy : MonoBehaviour
         nav = GetComponent<NavMeshAgent>();
         anim = corp.GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
-        
+        mAudioSrc=GetComponent<AudioSource>();
     }
     public void Shoot()
     {
         if (lastTimeShot + firingSpeed < Time.time)
         {
+
             lastTimeShot = Time.time;
             Instantiate(projectile, firingPoint.position, firingPoint.rotation);
+            mAudioSrc.Play();
             MuzzleFlash.SetActive(true);
             StartCoroutine(wait());
         }
