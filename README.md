@@ -2,6 +2,20 @@
 #
 #
 #
+
+## Documentatie FULL: 
+https://docs.google.com/document/d/10sEDIm5YSJPjSyqvvR-c5zaQN1Y9TSks3AN-9GmUA0M/edit?usp=sharing
+
+#
+#
+
+## Sprinturi:
+https://docs.google.com/spreadsheets/d/1RqIZTrd1QBGi3wmK62K13o9e_t6UqmpOQtq0rz2L6_0/edit#gid=0
+
+#
+#
+
+
 #### 👥 Echipa formata din:
 - Zabava Claudiu Alexandru [243]
 - Baciu Daniel Mihai [243]
@@ -28,4 +42,3 @@
 - O sa existe mai multe arene / nivele reprezentand mapa curenta, fiecare arena fiind deblocata in functie de un anumit scor obtinut de catre jucator
 - Un nivel se termina o data ce s-a atuns un anumit nivel sau dupa expirarea unui timer
 - Jocul o sa fie single-player
-- Ne vom gandi si la adaugarea fie unor abilitati fie a unor arme diferite pentru a-i oferi jucatorului un avantaj temporar in unele situatii.
