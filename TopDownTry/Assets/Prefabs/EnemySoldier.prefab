@@ -1018,10 +1018,10 @@ MonoBehaviour:
   firingPoint: {fileID: 3946562521225546685}
   projectile: {fileID: 8968108523173035623, guid: 73a23b214c50ef24c9b6a4a4f8052707, type: 3}
   firingSpeed: 1
-  pointsToGive: 10
+  pointsToGive: 5
   MuzzleFlash: {fileID: 6405160250124413105}
   eType: 0
-  minDistance: 10
+  minDistance: 11
 --- !u!195 &-3992024483524616409
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 15
-  maxProjectileDistance: 20
+  maxProjectileDistance: 12
   damage: 25
 --- !u!54 &-5147828116672579682
 Rigidbody:

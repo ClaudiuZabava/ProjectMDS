@@ -30,12 +30,13 @@ public class PlayerGun : MonoBehaviour
 
     public void Shoot()
     {
-        if (lastTimeShot + firingSpeed < Time.time)
+        if (lastTimeShot + firingSpeed < Time.time && PlayerPrefs.GetInt("pause") == 0)
         {
             lastTimeShot = Time.time;
             Instantiate(projectile, firingPoint.position, firingPoint.rotation);
             MuzzleFlash.SetActive(true);
-            mAudioSrc.Play();
+            if(PlayerPrefs.GetInt("sfxStats") == 1)
+                mAudioSrc.Play();
             StartCoroutine(wait());
         }
     }

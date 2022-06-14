@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner2 : MonoBehaviour
 {
-  public GameObject theEnemy;
+    public GameObject theEnemy;
     private GameObject player;
     private PlayerController playerScript;
     private int xPos;

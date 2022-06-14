@@ -127,7 +127,7 @@ MonoBehaviour:
   gun: {fileID: 174572}
   firingPoint: {fileID: 2794399055155246567}
   projectile: {fileID: 8968108523173035623, guid: 73a23b214c50ef24c9b6a4a4f8052707, type: 3}
-  firingSpeed: 1
+  firingSpeed: 0.5
   pointsToGive: 15
   MuzzleFlash: {fileID: 4025961762839816999}
   eType: 1

@@ -12,9 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Meniu2.unity
     guid: 3ccc7318466e91547bd960555648c91a
   - enabled: 1
+    path: Assets/Scenes/Meniu3.unity
+    guid: 623c29363cc74174dbc0b0f5d89db19f
+  - enabled: 1
     path: Assets/Scenes/Map1.unity
     guid: 5f539ef4889027c4c816785fbf6b272b
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/Map2.unity
+    guid: 19e1775f9f8ab764393fa3bd1c63c641
+  - enabled: 1
+    path: Assets/Scenes/Map3.unity
+    guid: 2091b8ca935446243860f487f814ac52
+  - enabled: 1
+    path: Assets/Scenes/GameOverMenu.unity
+    guid: f537d2396eb2177438d104fb0593ff2a
   m_configObjects: {}

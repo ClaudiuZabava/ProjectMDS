@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,9 +22,12 @@ public class PlayerController : MonoBehaviour
 
     private Animator anim;
 
+    public float OldPhealth;
+
 
     void Start()
     {
+        OldPhealth = phealth;
         anim = corp.GetComponent<Animator>();
         if (PlayerPrefs.HasKey("highScore")) {
             highScore = PlayerPrefs.GetFloat("highScore");
@@ -58,7 +62,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if(Physics.Raycast(ray, out hit))
+        if(Physics.Raycast(ray, out hit) && PlayerPrefs.GetInt("pause") == 0)
         {
             transform.LookAt(new Vector3(hit.point.x, transform.position.y, hit.point.z));
         }
@@ -81,7 +85,7 @@ public class PlayerController : MonoBehaviour
                 PlayerPrefs.Save();
             }
             Destroy(this.gameObject);
-            Application.Quit();
+            SceneManager.LoadScene(6);
         }
     }
 }

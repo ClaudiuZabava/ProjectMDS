@@ -66,7 +66,8 @@ public class Enemy : MonoBehaviour
             lastTimeShot = Time.time;
             Instantiate(projectile, firingPoint.position, firingPoint.rotation);
             MuzzleFlash.SetActive(true);
-            mAudioSrc.Play();
+            if(PlayerPrefs.GetInt("sfxStats") == 1)
+                mAudioSrc.Play();
             StartCoroutine(wait());
         }
     }
@@ -129,7 +130,7 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         player.GetComponent<PlayerController>().points += pointsToGive;
-
+        ScoreForUI.instance.AddPoints(pointsToGive);
         float playerPoints = player.GetComponent<PlayerController>().points;
 
         if (PlayerPrefs.HasKey("highScore"))
@@ -152,6 +153,10 @@ public class Enemy : MonoBehaviour
         else if(eType == 1)
         {
             EnemySpawner2.Instance.enemyCount-=1;
+        }
+        else if(eType == 2)
+        {
+            EnemySpawner3.Instance.enemyCount-=1;
         }
         Destroy(this.gameObject);
         

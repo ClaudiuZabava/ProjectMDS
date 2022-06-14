@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Meniu2.unity
+- path: Assets/Scenes/Meniu1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
