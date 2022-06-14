@@ -1,4 +1,4 @@
-# _🔫 WARMAGGEDON ARENA_
+# _🔫 WARMAGEDDON ARENA_
 #
 #
 #
