@@ -3,13 +3,13 @@
 #
 #
 
-## Documentatie FULL: 
+## 📄Documentatie FULL: 
 https://docs.google.com/document/d/10sEDIm5YSJPjSyqvvR-c5zaQN1Y9TSks3AN-9GmUA0M/edit?usp=sharing
 
 #
 #
 
-## Sprinturi:
+## 🔧Sprinturi:
 https://docs.google.com/spreadsheets/d/1RqIZTrd1QBGi3wmK62K13o9e_t6UqmpOQtq0rz2L6_0/edit#gid=0
 
 #
