@@ -14,6 +14,7 @@ https://docs.google.com/spreadsheets/d/1RqIZTrd1QBGi3wmK62K13o9e_t6UqmpOQtq0rz2L
 
 #
 #
+## 🎥 Demo with gameplay: https://www.youtube.com/watch?v=aK7ShkhJ7ro
 
 
 #### 👥 Echipa formata din:
